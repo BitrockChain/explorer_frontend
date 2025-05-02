@@ -38,40 +38,28 @@ const Footer = () => {
 
   const BLOCKSCOUT_LINKS = [
     {
-      icon: 'edit' as const,
-      iconSize: '16px',
-      text: 'Submit an issue',
-      url: issueUrl,
+      text: 'Website',
+      url: 'https://bit-rock.io',
     },
     {
-      icon: 'social/git' as const,
-      iconSize: '18px',
-      text: 'Contribute',
-      url: 'https://github.com/blockscout/blockscout',
+      text: 'Earn Bitrock',
+      url: 'https://stake.rock-swap.io/',
     },
     {
-      icon: 'social/twitter' as const,
-      iconSize: '18px',
-      text: 'X (ex-Twitter)',
-      url: 'https://x.com/blockscout',
+      text: 'Partnership',
+      url: 'https://www.bit-rock.io/#partnership',
     },
     {
-      icon: 'social/discord' as const,
-      iconSize: '24px',
-      text: 'Discord',
-      url: 'https://discord.gg/blockscout',
+      text: 'Twitter',
+      url: 'https://twitter.com/BitrockChain',
     },
     {
-      icon: 'brands/blockscout' as const,
-      iconSize: '18px',
-      text: 'All chains',
-      url: 'https://www.blockscout.com/chains-and-projects',
+      text: 'Telegram',
+      url: 'https://t.me/BitrockChain',
     },
     {
-      icon: 'donate' as const,
-      iconSize: '20px',
-      text: 'Donate',
-      url: 'https://github.com/sponsors/blockscout',
+      text: 'Chainlist',
+      url: 'https://chainlist.org/chain/7171',
     },
   ];
 
@@ -120,33 +108,15 @@ const Footer = () => {
 
     return (
       <Box gridArea={ gridArea }>
-        <Flex columnGap={ 2 } textStyle="xs" alignItems="center">
-          <span>Made with</span>
-          <Link href="https://www.blockscout.com" target="_blank" display="inline-flex" color={ logoColor } _hover={{ color: logoColor }}>
-            <IconSvg
-              name="networks/logo-placeholder"
-              width="80px"
-              height={ 4 }
-            />
-          </Link>
-        </Flex>
         <Text mt={ 3 } fontSize="xs">
-          Blockscout is a tool for inspecting and analyzing EVM based blockchains. Blockchain explorer for Ethereum Networks.
+        Bitrock Explorer is a tool that offers unparalleled transaction visibility and traceability, as well as comprehensive onchain analytics for the Bitrock Mainnet.
         </Text>
         <Box mt={ 6 } alignItems="start" textStyle="xs">
           { apiVersionUrl && (
             <Text>
-              Backend: <Link href={ apiVersionUrl } target="_blank">{ backendVersionData?.backend_version }</Link>
+              Bitrock Explorer: <Link href="https://github.com/bitrockchain" target="_blank">Version 2.5</Link>
             </Text>
           ) }
-          { frontendLink && (
-            <Text>
-              Frontend: { frontendLink }
-            </Text>
-          ) }
-          <Text>
-            Copyright { copy } Blockscout Limited 2023-{ (new Date()).getFullYear() }
-          </Text>
         </Box>
       </Box>
     );
@@ -205,7 +175,7 @@ const Footer = () => {
           >
             {
               ([
-                { title: 'Blockscout', links: BLOCKSCOUT_LINKS },
+                { title: 'Bitrock', links: BLOCKSCOUT_LINKS },
                 ...(linksData || []),
               ])
                 .slice(0, colNum)
