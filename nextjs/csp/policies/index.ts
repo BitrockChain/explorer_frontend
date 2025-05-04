@@ -14,3 +14,5 @@ export { rollbar } from './rollbar';
 export { safe } from './safe';
 export { usernameApi } from './usernameApi';
 export { walletConnect } from './walletConnect';
+export { cmcWidget } from './cmcWidget';
+

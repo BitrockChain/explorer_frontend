@@ -28,4 +28,18 @@ declare global {
   }
 }
 
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      'gecko-coin-price-marquee-widget': {
+        // Add the necessary props here (e.g., coinId, style, ...)
+        coinId?: string;
+        locale?: string;
+        style?: React.CSSProperties;
+        // ... other props
+      };
+    }
+  }
+}
+
 export {};
